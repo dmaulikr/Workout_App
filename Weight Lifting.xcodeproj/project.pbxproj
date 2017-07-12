@@ -33,6 +33,11 @@
 		85D1BCEE1F0DB2290054EC4B /* Weight_Lifting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85D1BCEC1F0DB2290054EC4B /* Weight_Lifting.xcdatamodeld */; };
 		85D1BCF01F0DB2290054EC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D1BCEF1F0DB2290054EC4B /* Assets.xcassets */; };
 		85D1BCF31F0DB2290054EC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D1BCF11F0DB2290054EC4B /* LaunchScreen.storyboard */; };
+		85F172FB1F15A6D2006E6A4C /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F172FA1F15A6D2006E6A4C /* AddWorkoutViewController.swift */; };
+		85F172FD1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F172FC1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift */; };
+		85F172FF1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F172FE1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift */; };
+		85F173011F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F173001F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift */; };
+		85F173081F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F173071F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		85D1BCEF1F0DB2290054EC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85D1BCF21F0DB2290054EC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85D1BCF41F0DB2290054EC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85F172FA1F15A6D2006E6A4C /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
+		85F172FC1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseForWorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		85F172FE1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutNameTableViewCell.swift; sourceTree = "<group>"; };
+		85F173001F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseListToForWorkoutViewController.swift; sourceTree = "<group>"; };
+		85F173071F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseWithButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,12 +130,10 @@
 			children = (
 				857346861F149B11004DACE0 /* images */,
 				85D1BCE51F0DB2290054EC4B /* AppDelegate.swift */,
-				85D1BCE71F0DB2290054EC4B /* WorkoutsViewController.swift */,
-				8573468D1F149EC4004DACE0 /* WorkoutsCollectionViewCell.swift */,
-				857346911F14ABD7004DACE0 /* CustomImageFlowLayout.swift */,
-				857346991F14B4F6004DACE0 /* ExercisesViewController.swift */,
-				8573469B1F14B54C004DACE0 /* ExerciseTableViewCell.swift */,
-				857346A31F14BF2E004DACE0 /* AddExerciseViewController.swift */,
+				85F173041F15D1AF006E6A4C /* Workout Screen */,
+				85F173051F15D20A006E6A4C /* Add Workout Screen */,
+				85F173061F15D280006E6A4C /* Add Exercise to Workout */,
+				85F173091F15D396006E6A4C /* Exercises */,
 				85D1BCE91F0DB2290054EC4B /* Main.storyboard */,
 				85D1BCEF1F0DB2290054EC4B /* Assets.xcassets */,
 				85D1BCF11F0DB2290054EC4B /* LaunchScreen.storyboard */,
@@ -133,6 +141,45 @@
 				85D1BCEC1F0DB2290054EC4B /* Weight_Lifting.xcdatamodeld */,
 			);
 			path = "Weight Lifting";
+			sourceTree = "<group>";
+		};
+		85F173041F15D1AF006E6A4C /* Workout Screen */ = {
+			isa = PBXGroup;
+			children = (
+				85D1BCE71F0DB2290054EC4B /* WorkoutsViewController.swift */,
+				857346911F14ABD7004DACE0 /* CustomImageFlowLayout.swift */,
+				8573468D1F149EC4004DACE0 /* WorkoutsCollectionViewCell.swift */,
+			);
+			name = "Workout Screen";
+			sourceTree = "<group>";
+		};
+		85F173051F15D20A006E6A4C /* Add Workout Screen */ = {
+			isa = PBXGroup;
+			children = (
+				85F172FA1F15A6D2006E6A4C /* AddWorkoutViewController.swift */,
+				85F172FC1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift */,
+				85F172FE1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift */,
+			);
+			name = "Add Workout Screen";
+			sourceTree = "<group>";
+		};
+		85F173061F15D280006E6A4C /* Add Exercise to Workout */ = {
+			isa = PBXGroup;
+			children = (
+				85F173001F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift */,
+				85F173071F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift */,
+			);
+			name = "Add Exercise to Workout";
+			sourceTree = "<group>";
+		};
+		85F173091F15D396006E6A4C /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				857346991F14B4F6004DACE0 /* ExercisesViewController.swift */,
+				8573469B1F14B54C004DACE0 /* ExerciseTableViewCell.swift */,
+				857346A31F14BF2E004DACE0 /* AddExerciseViewController.swift */,
+			);
+			name = Exercises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +214,7 @@
 				TargetAttributes = {
 					85D1BCE11F0DB2290054EC4B = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = R5TMPRGGM5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -222,14 +270,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F172FF1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift in Sources */,
 				8573468E1F149EC4004DACE0 /* WorkoutsCollectionViewCell.swift in Sources */,
+				85F173081F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift in Sources */,
+				85F172FD1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift in Sources */,
 				85D1BCE81F0DB2290054EC4B /* WorkoutsViewController.swift in Sources */,
+				85F172FB1F15A6D2006E6A4C /* AddWorkoutViewController.swift in Sources */,
 				857346A41F14BF2E004DACE0 /* AddExerciseViewController.swift in Sources */,
 				8573469A1F14B4F6004DACE0 /* ExercisesViewController.swift in Sources */,
 				8573469C1F14B54C004DACE0 /* ExerciseTableViewCell.swift in Sources */,
 				85D1BCEE1F0DB2290054EC4B /* Weight_Lifting.xcdatamodeld in Sources */,
 				85D1BCE61F0DB2290054EC4B /* AppDelegate.swift in Sources */,
 				857346921F14ABD7004DACE0 /* CustomImageFlowLayout.swift in Sources */,
+				85F173011F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R5TMPRGGM5;
 				INFOPLIST_FILE = "Weight Lifting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AwesomeInc.Weight-Lifting";
@@ -366,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R5TMPRGGM5;
 				INFOPLIST_FILE = "Weight Lifting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AwesomeInc.Weight-Lifting";

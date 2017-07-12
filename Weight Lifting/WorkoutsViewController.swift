@@ -12,9 +12,8 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    fileprivate let itemsPerRow: CGFloat = 3
-    fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,8 +43,28 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
     }
     
     
+    @IBAction func plusButtonClicked(_ sender: Any) {
+        
+        performSegue(withIdentifier: "fromWorkoutCollectionToAddWorkout", sender: nil)
+        
+    }
 
     
     
 }
+
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+
 
