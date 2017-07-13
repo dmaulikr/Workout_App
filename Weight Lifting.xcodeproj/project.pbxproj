@@ -38,6 +38,15 @@
 		85F172FF1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F172FE1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift */; };
 		85F173011F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F173001F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift */; };
 		85F173081F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F173071F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift */; };
+		85F173101F161B37006E6A4C /* tickedCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F1730A1F161B37006E6A4C /* tickedCircle.png */; };
+		85F173111F161B37006E6A4C /* tickedCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F1730B1F161B37006E6A4C /* tickedCircle@2x.png */; };
+		85F173121F161B37006E6A4C /* tickedCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F1730C1F161B37006E6A4C /* tickedCircle@3x.png */; };
+		85F173131F161B37006E6A4C /* untickedCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F1730D1F161B37006E6A4C /* untickedCircle.png */; };
+		85F173141F161B37006E6A4C /* untickedCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F1730E1F161B37006E6A4C /* untickedCircle@2x.png */; };
+		85F173151F161B37006E6A4C /* untickedCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F1730F1F161B37006E6A4C /* untickedCircle@3x.png */; };
+		85F1731F1F16223B006E6A4C /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F1731C1F16223B006E6A4C /* arrow.png */; };
+		85F173201F16223B006E6A4C /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F1731D1F16223B006E6A4C /* arrow@2x.png */; };
+		85F173211F16223B006E6A4C /* arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F1731E1F16223B006E6A4C /* arrow@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +83,15 @@
 		85F172FE1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutNameTableViewCell.swift; sourceTree = "<group>"; };
 		85F173001F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseListToForWorkoutViewController.swift; sourceTree = "<group>"; };
 		85F173071F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseWithButtonTableViewCell.swift; sourceTree = "<group>"; };
+		85F1730A1F161B37006E6A4C /* tickedCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tickedCircle.png; sourceTree = "<group>"; };
+		85F1730B1F161B37006E6A4C /* tickedCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tickedCircle@2x.png"; sourceTree = "<group>"; };
+		85F1730C1F161B37006E6A4C /* tickedCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tickedCircle@3x.png"; sourceTree = "<group>"; };
+		85F1730D1F161B37006E6A4C /* untickedCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = untickedCircle.png; sourceTree = "<group>"; };
+		85F1730E1F161B37006E6A4C /* untickedCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "untickedCircle@2x.png"; sourceTree = "<group>"; };
+		85F1730F1F161B37006E6A4C /* untickedCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "untickedCircle@3x.png"; sourceTree = "<group>"; };
+		85F1731C1F16223B006E6A4C /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		85F1731D1F16223B006E6A4C /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		85F1731E1F16223B006E6A4C /* arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +108,15 @@
 		857346861F149B11004DACE0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				85F1731C1F16223B006E6A4C /* arrow.png */,
+				85F1731D1F16223B006E6A4C /* arrow@2x.png */,
+				85F1731E1F16223B006E6A4C /* arrow@3x.png */,
+				85F1730A1F161B37006E6A4C /* tickedCircle.png */,
+				85F1730B1F161B37006E6A4C /* tickedCircle@2x.png */,
+				85F1730C1F161B37006E6A4C /* tickedCircle@3x.png */,
+				85F1730D1F161B37006E6A4C /* untickedCircle.png */,
+				85F1730E1F161B37006E6A4C /* untickedCircle@2x.png */,
+				85F1730F1F161B37006E6A4C /* untickedCircle@3x.png */,
 				857346AB1F14C1F8004DACE0 /* placeholderForAddExercise.png */,
 				857346AC1F14C1F8004DACE0 /* placeholderForAddExercise@2x.png */,
 				857346AD1F14C1F8004DACE0 /* placeholderForAddExercise@3x.png */,
@@ -242,7 +269,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F173131F161B37006E6A4C /* untickedCircle.png in Resources */,
+				85F173101F161B37006E6A4C /* tickedCircle.png in Resources */,
 				857346AA1F14C073004DACE0 /* chooseImage@3x.png in Resources */,
+				85F1731F1F16223B006E6A4C /* arrow.png in Resources */,
 				857346A11F14BC3F004DACE0 /* exercises@2x.png in Resources */,
 				85D1BCF31F0DB2290054EC4B /* LaunchScreen.storyboard in Resources */,
 				8573468C1F149B22004DACE0 /* workouts@3x.png in Resources */,
@@ -251,15 +281,21 @@
 				857346A01F14BC3F004DACE0 /* exercises.png in Resources */,
 				857346A21F14BC3F004DACE0 /* exercises@3x.png in Resources */,
 				857346981F14B118004DACE0 /* placeholder@3x.png in Resources */,
+				85F173201F16223B006E6A4C /* arrow@2x.png in Resources */,
+				85F173111F161B37006E6A4C /* tickedCircle@2x.png in Resources */,
+				85F173151F161B37006E6A4C /* untickedCircle@3x.png in Resources */,
 				8573468B1F149B22004DACE0 /* workouts@2x.png in Resources */,
 				8573468A1F149B22004DACE0 /* workouts.png in Resources */,
+				85F173121F161B37006E6A4C /* tickedCircle@3x.png in Resources */,
 				857346961F14B118004DACE0 /* placeholder.png in Resources */,
 				857346AE1F14C1F8004DACE0 /* placeholderForAddExercise.png in Resources */,
+				85F173141F161B37006E6A4C /* untickedCircle@2x.png in Resources */,
 				857346A81F14C073004DACE0 /* chooseImage.png in Resources */,
 				857346B01F14C1F8004DACE0 /* placeholderForAddExercise@3x.png in Resources */,
 				85D1BCF01F0DB2290054EC4B /* Assets.xcassets in Resources */,
 				85D1BCEB1F0DB2290054EC4B /* Main.storyboard in Resources */,
 				857346A91F14C073004DACE0 /* chooseImage@2x.png in Resources */,
+				85F173211F16223B006E6A4C /* arrow@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
