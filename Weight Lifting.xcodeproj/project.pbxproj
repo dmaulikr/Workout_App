@@ -27,12 +27,29 @@
 		857346AE1F14C1F8004DACE0 /* placeholderForAddExercise.png in Resources */ = {isa = PBXBuildFile; fileRef = 857346AB1F14C1F8004DACE0 /* placeholderForAddExercise.png */; };
 		857346AF1F14C1F8004DACE0 /* placeholderForAddExercise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 857346AC1F14C1F8004DACE0 /* placeholderForAddExercise@2x.png */; };
 		857346B01F14C1F8004DACE0 /* placeholderForAddExercise@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 857346AD1F14C1F8004DACE0 /* placeholderForAddExercise@3x.png */; };
+		85A1AB831F19FB64004282A3 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB7F1F19FB64004282A3 /* Workout+CoreDataClass.swift */; };
+		85A1AB841F19FB64004282A3 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB801F19FB64004282A3 /* Workout+CoreDataProperties.swift */; };
+		85A1AB851F19FB64004282A3 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB811F19FB64004282A3 /* Exercise+CoreDataClass.swift */; };
+		85A1AB861F19FB64004282A3 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB821F19FB64004282A3 /* Exercise+CoreDataProperties.swift */; };
+		85A1AB891F19FF01004282A3 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB881F19FF01004282A3 /* DatabaseController.swift */; };
 		85D1BCE61F0DB2290054EC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1BCE51F0DB2290054EC4B /* AppDelegate.swift */; };
 		85D1BCE81F0DB2290054EC4B /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1BCE71F0DB2290054EC4B /* WorkoutsViewController.swift */; };
 		85D1BCEB1F0DB2290054EC4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D1BCE91F0DB2290054EC4B /* Main.storyboard */; };
 		85D1BCEE1F0DB2290054EC4B /* Weight_Lifting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85D1BCEC1F0DB2290054EC4B /* Weight_Lifting.xcdatamodeld */; };
 		85D1BCF01F0DB2290054EC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D1BCEF1F0DB2290054EC4B /* Assets.xcassets */; };
 		85D1BCF31F0DB2290054EC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D1BCF11F0DB2290054EC4B /* LaunchScreen.storyboard */; };
+		85D834DA1F1725BF0068A9B7 /* placeholderForAddImageToWorkout.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834D71F1725BF0068A9B7 /* placeholderForAddImageToWorkout.png */; };
+		85D834DB1F1725BF0068A9B7 /* placeholderForAddImageToWorkout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834D81F1725BF0068A9B7 /* placeholderForAddImageToWorkout@2x.png */; };
+		85D834DC1F1725BF0068A9B7 /* placeholderForAddImageToWorkout@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834D91F1725BF0068A9B7 /* placeholderForAddImageToWorkout@3x.png */; };
+		85D834E61F172C9F0068A9B7 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834E31F172C9F0068A9B7 /* save.png */; };
+		85D834E71F172C9F0068A9B7 /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834E41F172C9F0068A9B7 /* save@2x.png */; };
+		85D834E81F172C9F0068A9B7 /* save@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834E51F172C9F0068A9B7 /* save@3x.png */; };
+		85D834EC1F1879950068A9B7 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834E91F1879950068A9B7 /* record.png */; };
+		85D834ED1F1879950068A9B7 /* record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834EA1F1879950068A9B7 /* record@2x.png */; };
+		85D834EE1F1879950068A9B7 /* record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834EB1F1879950068A9B7 /* record@3x.png */; };
+		85D834F21F187AB00068A9B7 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834EF1F187AB00068A9B7 /* settings@2x.png */; };
+		85D834F31F187AB00068A9B7 /* settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834F01F187AB00068A9B7 /* settings@3x.png */; };
+		85D834F41F187AB00068A9B7 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D834F11F187AB00068A9B7 /* settings.png */; };
 		85F172FB1F15A6D2006E6A4C /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F172FA1F15A6D2006E6A4C /* AddWorkoutViewController.swift */; };
 		85F172FD1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F172FC1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift */; };
 		85F172FF1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F172FE1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift */; };
@@ -70,6 +87,12 @@
 		857346AB1F14C1F8004DACE0 /* placeholderForAddExercise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholderForAddExercise.png; sourceTree = "<group>"; };
 		857346AC1F14C1F8004DACE0 /* placeholderForAddExercise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholderForAddExercise@2x.png"; sourceTree = "<group>"; };
 		857346AD1F14C1F8004DACE0 /* placeholderForAddExercise@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholderForAddExercise@3x.png"; sourceTree = "<group>"; };
+		85A1AB7F1F19FB64004282A3 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		85A1AB801F19FB64004282A3 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85A1AB811F19FB64004282A3 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
+		85A1AB821F19FB64004282A3 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85A1AB881F19FF01004282A3 /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		85A1AB8A1F1B537F004282A3 /* Weight_Lifting 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Weight_Lifting 2.xcdatamodel"; sourceTree = "<group>"; };
 		85D1BCE21F0DB2290054EC4B /* Weight Lifting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weight Lifting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D1BCE51F0DB2290054EC4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85D1BCE71F0DB2290054EC4B /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +101,18 @@
 		85D1BCEF1F0DB2290054EC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85D1BCF21F0DB2290054EC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85D1BCF41F0DB2290054EC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85D834D71F1725BF0068A9B7 /* placeholderForAddImageToWorkout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholderForAddImageToWorkout.png; sourceTree = "<group>"; };
+		85D834D81F1725BF0068A9B7 /* placeholderForAddImageToWorkout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholderForAddImageToWorkout@2x.png"; sourceTree = "<group>"; };
+		85D834D91F1725BF0068A9B7 /* placeholderForAddImageToWorkout@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholderForAddImageToWorkout@3x.png"; sourceTree = "<group>"; };
+		85D834E31F172C9F0068A9B7 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		85D834E41F172C9F0068A9B7 /* save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save@2x.png"; sourceTree = "<group>"; };
+		85D834E51F172C9F0068A9B7 /* save@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save@3x.png"; sourceTree = "<group>"; };
+		85D834E91F1879950068A9B7 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record.png; sourceTree = "<group>"; };
+		85D834EA1F1879950068A9B7 /* record@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record@2x.png"; sourceTree = "<group>"; };
+		85D834EB1F1879950068A9B7 /* record@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record@3x.png"; sourceTree = "<group>"; };
+		85D834EF1F187AB00068A9B7 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		85D834F01F187AB00068A9B7 /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
+		85D834F11F187AB00068A9B7 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		85F172FA1F15A6D2006E6A4C /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		85F172FC1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseForWorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		85F172FE1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutNameTableViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +143,18 @@
 		857346861F149B11004DACE0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				85D834EF1F187AB00068A9B7 /* settings@2x.png */,
+				85D834F01F187AB00068A9B7 /* settings@3x.png */,
+				85D834F11F187AB00068A9B7 /* settings.png */,
+				85D834E91F1879950068A9B7 /* record.png */,
+				85D834EA1F1879950068A9B7 /* record@2x.png */,
+				85D834EB1F1879950068A9B7 /* record@3x.png */,
+				85D834E31F172C9F0068A9B7 /* save.png */,
+				85D834E41F172C9F0068A9B7 /* save@2x.png */,
+				85D834E51F172C9F0068A9B7 /* save@3x.png */,
+				85D834D71F1725BF0068A9B7 /* placeholderForAddImageToWorkout.png */,
+				85D834D81F1725BF0068A9B7 /* placeholderForAddImageToWorkout@2x.png */,
+				85D834D91F1725BF0068A9B7 /* placeholderForAddImageToWorkout@3x.png */,
 				85F1731C1F16223B006E6A4C /* arrow.png */,
 				85F1731D1F16223B006E6A4C /* arrow@2x.png */,
 				85F1731E1F16223B006E6A4C /* arrow@3x.png */,
@@ -136,6 +183,17 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		85A1AB871F19FB8D004282A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85A1AB7F1F19FB64004282A3 /* Workout+CoreDataClass.swift */,
+				85A1AB801F19FB64004282A3 /* Workout+CoreDataProperties.swift */,
+				85A1AB811F19FB64004282A3 /* Exercise+CoreDataClass.swift */,
+				85A1AB821F19FB64004282A3 /* Exercise+CoreDataProperties.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		85D1BCD91F0DB2290054EC4B = {
 			isa = PBXGroup;
 			children = (
@@ -155,8 +213,10 @@
 		85D1BCE41F0DB2290054EC4B /* Weight Lifting */ = {
 			isa = PBXGroup;
 			children = (
+				85A1AB871F19FB8D004282A3 /* Models */,
 				857346861F149B11004DACE0 /* images */,
 				85D1BCE51F0DB2290054EC4B /* AppDelegate.swift */,
+				85A1AB881F19FF01004282A3 /* DatabaseController.swift */,
 				85F173041F15D1AF006E6A4C /* Workout Screen */,
 				85F173051F15D20A006E6A4C /* Add Workout Screen */,
 				85F173061F15D280006E6A4C /* Add Exercise to Workout */,
@@ -275,27 +335,39 @@
 				85F1731F1F16223B006E6A4C /* arrow.png in Resources */,
 				857346A11F14BC3F004DACE0 /* exercises@2x.png in Resources */,
 				85D1BCF31F0DB2290054EC4B /* LaunchScreen.storyboard in Resources */,
+				85D834EC1F1879950068A9B7 /* record.png in Resources */,
 				8573468C1F149B22004DACE0 /* workouts@3x.png in Resources */,
 				857346AF1F14C1F8004DACE0 /* placeholderForAddExercise@2x.png in Resources */,
 				857346971F14B118004DACE0 /* placeholder@2x.png in Resources */,
+				85D834EE1F1879950068A9B7 /* record@3x.png in Resources */,
 				857346A01F14BC3F004DACE0 /* exercises.png in Resources */,
 				857346A21F14BC3F004DACE0 /* exercises@3x.png in Resources */,
 				857346981F14B118004DACE0 /* placeholder@3x.png in Resources */,
 				85F173201F16223B006E6A4C /* arrow@2x.png in Resources */,
 				85F173111F161B37006E6A4C /* tickedCircle@2x.png in Resources */,
+				85D834F31F187AB00068A9B7 /* settings@3x.png in Resources */,
 				85F173151F161B37006E6A4C /* untickedCircle@3x.png in Resources */,
 				8573468B1F149B22004DACE0 /* workouts@2x.png in Resources */,
 				8573468A1F149B22004DACE0 /* workouts.png in Resources */,
 				85F173121F161B37006E6A4C /* tickedCircle@3x.png in Resources */,
 				857346961F14B118004DACE0 /* placeholder.png in Resources */,
+				85D834ED1F1879950068A9B7 /* record@2x.png in Resources */,
+				85D834E81F172C9F0068A9B7 /* save@3x.png in Resources */,
+				85D834F21F187AB00068A9B7 /* settings@2x.png in Resources */,
 				857346AE1F14C1F8004DACE0 /* placeholderForAddExercise.png in Resources */,
 				85F173141F161B37006E6A4C /* untickedCircle@2x.png in Resources */,
 				857346A81F14C073004DACE0 /* chooseImage.png in Resources */,
 				857346B01F14C1F8004DACE0 /* placeholderForAddExercise@3x.png in Resources */,
+				85D834E71F172C9F0068A9B7 /* save@2x.png in Resources */,
 				85D1BCF01F0DB2290054EC4B /* Assets.xcassets in Resources */,
 				85D1BCEB1F0DB2290054EC4B /* Main.storyboard in Resources */,
+				85D834E61F172C9F0068A9B7 /* save.png in Resources */,
 				857346A91F14C073004DACE0 /* chooseImage@2x.png in Resources */,
+				85D834DA1F1725BF0068A9B7 /* placeholderForAddImageToWorkout.png in Resources */,
 				85F173211F16223B006E6A4C /* arrow@3x.png in Resources */,
+				85D834F41F187AB00068A9B7 /* settings.png in Resources */,
+				85D834DC1F1725BF0068A9B7 /* placeholderForAddImageToWorkout@3x.png in Resources */,
+				85D834DB1F1725BF0068A9B7 /* placeholderForAddImageToWorkout@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +380,19 @@
 			files = (
 				85F172FF1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift in Sources */,
 				8573468E1F149EC4004DACE0 /* WorkoutsCollectionViewCell.swift in Sources */,
+				85A1AB861F19FB64004282A3 /* Exercise+CoreDataProperties.swift in Sources */,
 				85F173081F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift in Sources */,
+				85A1AB851F19FB64004282A3 /* Exercise+CoreDataClass.swift in Sources */,
 				85F172FD1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift in Sources */,
 				85D1BCE81F0DB2290054EC4B /* WorkoutsViewController.swift in Sources */,
 				85F172FB1F15A6D2006E6A4C /* AddWorkoutViewController.swift in Sources */,
+				85A1AB841F19FB64004282A3 /* Workout+CoreDataProperties.swift in Sources */,
 				857346A41F14BF2E004DACE0 /* AddExerciseViewController.swift in Sources */,
+				85A1AB831F19FB64004282A3 /* Workout+CoreDataClass.swift in Sources */,
 				8573469A1F14B4F6004DACE0 /* ExercisesViewController.swift in Sources */,
 				8573469C1F14B54C004DACE0 /* ExerciseTableViewCell.swift in Sources */,
 				85D1BCEE1F0DB2290054EC4B /* Weight_Lifting.xcdatamodeld in Sources */,
+				85A1AB891F19FF01004282A3 /* DatabaseController.swift in Sources */,
 				85D1BCE61F0DB2290054EC4B /* AppDelegate.swift in Sources */,
 				857346921F14ABD7004DACE0 /* CustomImageFlowLayout.swift in Sources */,
 				85F173011F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift in Sources */,
@@ -492,6 +569,7 @@
 		85D1BCEC1F0DB2290054EC4B /* Weight_Lifting.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				85A1AB8A1F1B537F004282A3 /* Weight_Lifting 2.xcdatamodel */,
 				85D1BCED1F0DB2290054EC4B /* Weight_Lifting.xcdatamodel */,
 			);
 			currentVersion = 85D1BCED1F0DB2290054EC4B /* Weight_Lifting.xcdatamodel */;

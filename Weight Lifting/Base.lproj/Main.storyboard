@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -336,47 +337,61 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutName" rowHeight="55" id="32j-dK-4YV" customClass="WorkoutNameTableViewCell" customModule="Weight_Lifting" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutName" rowHeight="201" id="32j-dK-4YV" customClass="WorkoutNameTableViewCell" customModule="Weight_Lifting" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="201"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="32j-dK-4YV" id="G7G-Wa-INd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. Leg Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIa-Vg-RMe">
-                                                    <rect key="frame" x="150" y="12" width="211" height="30"/>
+                                                    <rect key="frame" x="150" y="16" width="211" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO2-ii-IRx">
-                                                    <rect key="frame" x="23" y="17" width="119" height="21"/>
+                                                    <rect key="frame" x="23" y="21" width="119" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chooseImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="KZd-f1-STV">
+                                                    <rect key="frame" x="23" y="61" width="118" height="30"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderForAddImageToWorkout.png" translatesAutoresizingMaskIntoConstraints="NO" id="xPM-wi-UGz">
+                                                    <rect key="frame" x="150" y="61" width="211" height="119"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eIa-Vg-RMe" firstAttribute="leading" secondItem="cO2-ii-IRx" secondAttribute="trailing" constant="8" symbolic="YES" id="9Vs-hH-Mxj"/>
-                                                <constraint firstItem="cO2-ii-IRx" firstAttribute="centerY" secondItem="G7G-Wa-INd" secondAttribute="centerY" id="Zvn-D7-rvF"/>
-                                                <constraint firstItem="cO2-ii-IRx" firstAttribute="centerY" secondItem="eIa-Vg-RMe" secondAttribute="centerY" id="a9x-AT-jhd"/>
-                                                <constraint firstItem="cO2-ii-IRx" firstAttribute="leading" secondItem="G7G-Wa-INd" secondAttribute="leadingMargin" constant="15" id="hab-pe-FJk"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eIa-Vg-RMe" secondAttribute="trailing" constant="6" id="mXd-ps-xa6"/>
+                                                <constraint firstItem="KZd-f1-STV" firstAttribute="top" secondItem="cO2-ii-IRx" secondAttribute="bottom" constant="19" id="2oV-T4-c7m"/>
+                                                <constraint firstItem="eIa-Vg-RMe" firstAttribute="leading" secondItem="cO2-ii-IRx" secondAttribute="trailing" constant="8" symbolic="YES" id="BsM-vK-8Rw"/>
+                                                <constraint firstItem="eIa-Vg-RMe" firstAttribute="leading" secondItem="xPM-wi-UGz" secondAttribute="leading" id="Koz-cQ-7JF"/>
+                                                <constraint firstItem="cO2-ii-IRx" firstAttribute="leading" secondItem="KZd-f1-STV" secondAttribute="leading" id="OJN-9a-Vjw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eIa-Vg-RMe" secondAttribute="trailing" constant="6" id="PJ7-PL-qS2"/>
+                                                <constraint firstItem="eIa-Vg-RMe" firstAttribute="trailing" secondItem="xPM-wi-UGz" secondAttribute="trailing" id="RtV-0c-TT6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xPM-wi-UGz" secondAttribute="bottom" constant="12.5" id="TS7-Ms-VhQ"/>
+                                                <constraint firstItem="cO2-ii-IRx" firstAttribute="leading" secondItem="G7G-Wa-INd" secondAttribute="leadingMargin" constant="15" id="UxQ-lq-UrB"/>
+                                                <constraint firstItem="cO2-ii-IRx" firstAttribute="centerY" secondItem="eIa-Vg-RMe" secondAttribute="centerY" id="g3T-b2-Ifa"/>
+                                                <constraint firstItem="eIa-Vg-RMe" firstAttribute="top" secondItem="G7G-Wa-INd" secondAttribute="topMargin" constant="8" id="nI9-Ng-0dO"/>
+                                                <constraint firstItem="KZd-f1-STV" firstAttribute="top" secondItem="xPM-wi-UGz" secondAttribute="top" id="tXy-D2-6J7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="chooseImage" destination="KZd-f1-STV" id="tAD-sK-IZd"/>
+                                            <outlet property="workoutImage" destination="xPM-wi-UGz" id="bh5-3B-Swm"/>
                                             <outlet property="workoutNameText" destination="eIa-Vg-RMe" id="g1S-mP-E3y"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExerciseForWorkoutCell" rowHeight="136" id="hwf-fq-LDM" customClass="ExerciseForWorkoutTableViewCell" customModule="Weight_Lifting" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="83" width="375" height="136"/>
+                                        <rect key="frame" x="0.0" y="229" width="375" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hwf-fq-LDM" id="37d-iy-I6h">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="135.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rdK-UK-cnX">
-                                                    <rect key="frame" x="22" y="15.5" width="112" height="105"/>
+                                                    <rect key="frame" x="22" y="14.5" width="112" height="105"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="105" id="CjX-Wm-t1T"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="Dhn-cU-RSg"/>
@@ -385,7 +400,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JB5-6e-OGv">
-                                                    <rect key="frame" x="155" y="58" width="53" height="21"/>
+                                                    <rect key="frame" x="155" y="57" width="53" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="53" id="gT0-SA-Zn2"/>
                                                         <constraint firstAttribute="width" constant="53" id="s6U-bc-MP7"/>
@@ -395,7 +410,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N67-Ha-f58">
-                                                    <rect key="frame" x="206" y="58" width="51" height="21"/>
+                                                    <rect key="frame" x="206" y="57" width="51" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="51" id="2Zv-D7-8eU"/>
                                                         <constraint firstAttribute="width" constant="51" id="iZ2-8W-pq8"/>
@@ -405,19 +420,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRc-4u-lTh">
-                                                    <rect key="frame" x="155" y="100" width="53" height="20.5"/>
+                                                    <rect key="frame" x="155" y="99" width="53" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHm-m1-fiR">
-                                                    <rect key="frame" x="206" y="99.5" width="51" height="21"/>
+                                                    <rect key="frame" x="206" y="98.5" width="51" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWq-q6-t1k">
-                                                    <rect key="frame" x="155" y="15.5" width="188" height="21.5"/>
+                                                    <rect key="frame" x="155" y="14.5" width="188" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -503,11 +518,18 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="pY3-Gd-l07">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sZI-9i-kt3">
-                            <connections>
-                                <action selector="addExercisesButtonClicked:" destination="E67-gp-Hmi" id="ZxF-cN-kHZ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="sZI-9i-kt3">
+                                <connections>
+                                    <action selector="addExercisesButtonClicked:" destination="E67-gp-Hmi" id="ZxF-cN-kHZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="save.png" id="Ir7-Qn-QMk">
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="E67-gp-Hmi" id="9Cc-uT-egK"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bnA-4X-mVb" id="PgD-1M-T0T"/>
@@ -682,7 +704,7 @@
         <scene sceneID="YJE-yx-Ljh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SoH-a8-JA7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Log Exercise" id="Vp2-z7-jsP"/>
+                    <tabBarItem key="tabBarItem" title="Log Exercise" image="record.png" id="Vp2-z7-jsP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZW6-lg-4hX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -701,7 +723,7 @@
         <scene sceneID="eFI-SS-Uu3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Z2-uJ-Ie0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="151-4b-MuE"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings.png" id="151-4b-MuE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X4q-U2-i3i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -723,6 +745,10 @@
         <image name="exercises.png" width="25" height="25"/>
         <image name="placeholder.png" width="110" height="82"/>
         <image name="placeholderForAddExercise.png" width="343" height="272"/>
+        <image name="placeholderForAddImageToWorkout.png" width="211" height="119"/>
+        <image name="record.png" width="22" height="28"/>
+        <image name="save.png" width="25" height="25"/>
+        <image name="settings.png" width="25" height="25"/>
         <image name="workouts.png" width="25" height="25"/>
     </resources>
 </document>

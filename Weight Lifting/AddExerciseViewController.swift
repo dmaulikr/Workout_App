@@ -33,8 +33,8 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
         chooseImage.addGestureRecognizer(gestureRecognizer)
         
         if (chosenExercise != "") {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            
+            let context = DatabaseController.getContext()
+
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
             fetchRequest.predicate = NSPredicate(format: "name = %@", self.chosenExercise)
             fetchRequest.returnsObjectsAsFaults = false
@@ -121,33 +121,30 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func saveButtonClicked(_ sender: Any) {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        //let task = Task(context: context)
         
-        if (self.chosenExercise == ""){
-            let newExercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: context)
-            newExercise.setValue(nameText.text, forKey: "name")
-            newExercise.setValue(repNumText.text, forKey: "repNum")
-            newExercise.setValue(setNumText.text, forKey: "setNum")
-            newExercise.setValue(UIImageJPEGRepresentation(imageView.image!,1), forKey: "image")
-            
-            do {
-                try context.save()
-                print("we saved it!")
-            } catch {
-                print("error")
-            }
+        
+        
+        if (self.chosenExercise == "") {
+            let newExercise : Exercise = NSEntityDescription.insertNewObject(forEntityName: String(describing: Exercise.self), into: DatabaseController.getContext()) as! Exercise
+            newExercise.name = nameText.text
+            newExercise.repNum = repNumText.text
+            newExercise.setNum = setNumText.text
+            newExercise.image = UIImageJPEGRepresentation(imageView.image!, 1)! as NSData
+            DatabaseController.saveContext()
         } else {
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
+            
+            let fetchRequest:NSFetchRequest<Exercise> = Exercise.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "name = %@", self.chosenExercise)
             fetchRequest.returnsObjectsAsFaults = false
             
             
             do {
+                let context = DatabaseController.getContext()
+
                 let results = try context.fetch(fetchRequest)
                 
                 if results.count > 0 {
-                    for result in results as! [NSManagedObject] {
+                    for result in results as [NSManagedObject] {
                         result.setValue(nameText.text, forKey: "name")
                         result.setValue(repNumText.text, forKey: "repNum")
                         result.setValue(setNumText.text, forKey: "setNum")

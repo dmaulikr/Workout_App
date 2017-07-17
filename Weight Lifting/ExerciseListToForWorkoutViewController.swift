@@ -23,12 +23,7 @@ class ExerciseListToForWorkoutViewController: UIViewController,UITableViewDataSo
     var selectedExercises = [String]()
     
     @IBOutlet weak var exerciseTableView: UITableView!
-    
-    //var delegate: MeditationVCDelegate! = nil
-    
 
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +41,7 @@ class ExerciseListToForWorkoutViewController: UIViewController,UITableViewDataSo
     }
     
     @IBAction func saveButtonClicked(_ sender: Any) {
-        print("before")
+        
         for element in selectedExercises {
             print (element)
         }
@@ -56,10 +51,8 @@ class ExerciseListToForWorkoutViewController: UIViewController,UITableViewDataSo
             if (cell.imageSelected == true) {
                 if (cell.exerciseNameLabel.text != "") {
                     if (!selectedExercises.contains(cell.exerciseNameLabel.text!)){
-                        print("appending")
                         selectedExercises.append(cell.exerciseNameLabel.text!)
                     }
-//                    print(cell.exerciseNameLabel.text ?? "")
                 }
             } else {
                 if (selectedExercises.contains(cell.exerciseNameLabel.text!)) {
@@ -69,7 +62,7 @@ class ExerciseListToForWorkoutViewController: UIViewController,UITableViewDataSo
                 }
             }
         }
-        print("after")
+
         for element in selectedExercises {
             print (element)
         }
@@ -84,13 +77,16 @@ class ExerciseListToForWorkoutViewController: UIViewController,UITableViewDataSo
     }
 
     func fetchAllExerciseData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
+
+        
+        let request:NSFetchRequest<Exercise> = Exercise.fetchRequest()
+
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
         request.returnsObjectsAsFaults = false
         
         do {
-            let results = try context.fetch(request)
+            let results = try DatabaseController.getContext().fetch(request)
             
             if (results.count > 0) {
                 exerciseNameArray.removeAll(keepingCapacity: false)
@@ -98,7 +94,7 @@ class ExerciseListToForWorkoutViewController: UIViewController,UITableViewDataSo
                 setNumArray.removeAll(keepingCapacity: false)
                 imageArray.removeAll(keepingCapacity: false)
                 
-                for result in results as! [NSManagedObject]{
+                for result in results as [NSManagedObject]{
                     
                     if let exerciseName = result.value(forKey: "name") as? String {
                         self.exerciseNameArray.append(exerciseName)

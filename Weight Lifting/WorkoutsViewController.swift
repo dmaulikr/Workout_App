@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
@@ -27,6 +28,55 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
     }
 
 
+    override func viewDidAppear(_ animated: Bool) {
+  
+        
+        fetchExercises()
+        fetchWorkouts()
+        
+        
+        
+    }
+    
+    
+    func fetchWorkouts() {
+        
+        let fetchRequest:NSFetchRequest<Workout> = Workout.fetchRequest()
+        
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+            print("number of workouts: \(searchResults.count)")
+            
+            for result in searchResults as [Workout]{
+                print(result.name ?? "no name given")
+            }
+        }
+        catch{
+            print("Error: \(error)")
+        }
+        
+    }
+    
+    
+    func fetchExercises() {
+        
+        let fetchRequest:NSFetchRequest<Exercise> = Exercise.fetchRequest()
+        
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+            print("number of exercises: \(searchResults.count)")
+            
+            for result in searchResults as [Exercise]{
+                print(result.name ?? "no name given")
+            }
+        }
+        catch{
+            print("Error: \(error)")
+        }
+        
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10

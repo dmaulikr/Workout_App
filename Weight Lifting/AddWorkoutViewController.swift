@@ -133,7 +133,8 @@ class AddWorkoutViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func fetchAllExerciseData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let context = DatabaseController.getContext()
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
         request.returnsObjectsAsFaults = false
@@ -178,11 +179,78 @@ class AddWorkoutViewController: UIViewController,UITableViewDelegate,UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if (indexPath.row == 0) {
-            return 55
+            return 201
         } else {
             return 136
         }
         
     }
+    
+    
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        
+        var indexPath = IndexPath(row: 0, section: 0)
+        let cell1 = (tableView.cellForRow(at: indexPath) as! WorkoutNameTableViewCell)
+        if cell1.workoutNameText.text != "" {
+            
+            let workout:Workout = NSEntityDescription.insertNewObject(forEntityName: String(describing: Workout.self), into: DatabaseController.getContext()) as! Workout
+            
+            workout.name = cell1.workoutNameText.text
+            workout.image = UIImageJPEGRepresentation(cell1.workoutImage.image!, 1)! as NSData
+            
+            
+            var i : Int = 1
+            
+            while (i < tableView.numberOfRows(inSection: 0)) {
+                indexPath = IndexPath(row: i, section: 0)
+                print("here")
+                
+                let context = DatabaseController.getContext()
+                
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
+                fetchRequest.predicate = NSPredicate(format: "name = %@", (tableView.cellForRow(at: indexPath) as! ExerciseForWorkoutTableViewCell).exerciseNameLabel.text!)
+                fetchRequest.returnsObjectsAsFaults = false
+                
+                do {
+                    let fetchedExercises = try context.fetch(fetchRequest) as! [Exercise]
+                    
+                    if (fetchedExercises.count == 1) {
+                        
+                        let fetchedExercise = fetchedExercises[0]
+                        
+                        if fetchedExercise.name != "" {
+                            
+                            workout.addToExercises(fetchedExercise)
+                            
+                        }
+                        
+                    }
+                   
+                    
+                } catch {
+                    print("error")
+                }
+                
+                
+                
+                i = i + 1
+            }
+            
+            do {
+                let context = DatabaseController.getContext()
+                
+                
+                try context.save()
+                
+            } catch {
+                print("error")
+            }
+            
+        }
+        
+        _ = self.navigationController?.popViewController(animated: true)
+
+    }
+    
 
 }

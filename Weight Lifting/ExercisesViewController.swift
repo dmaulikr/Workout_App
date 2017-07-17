@@ -37,13 +37,11 @@ class ExercisesViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     
     func fetchData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
-        request.returnsObjectsAsFaults = false
+        let fetchRequest:NSFetchRequest<Exercise> = Exercise.fetchRequest()
+        fetchRequest.returnsObjectsAsFaults = false
         
         do {
-            let results = try context.fetch(request)
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
             
             if (results.count > 0) {
                 exerciseNameArray.removeAll(keepingCapacity: false)
@@ -51,7 +49,7 @@ class ExercisesViewController: UIViewController,UITableViewDelegate,UITableViewD
                 setNumArray.removeAll(keepingCapacity: false)
                 imageArray.removeAll(keepingCapacity: false)
                 
-                for result in results as! [NSManagedObject]{
+                for result in results as [NSManagedObject]{
                     
                     if let exerciseName = result.value(forKey: "name") as? String {
                         self.exerciseNameArray.append(exerciseName)
@@ -117,4 +115,7 @@ class ExercisesViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
 
+    
+    
+    
 }

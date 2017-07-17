@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ExerciseForWorkoutTableViewCell: UITableViewCell {
 
@@ -14,6 +15,8 @@ class ExerciseForWorkoutTableViewCell: UITableViewCell {
     @IBOutlet weak var exerciseNameLabel: UILabel!
     @IBOutlet weak var setNumLabel: UILabel!
     @IBOutlet weak var repNumLabel: UILabel!
+    
+    var exerciseObject : NSManagedObject = NSManagedObject()
     
     override func awakeFromNib() {
         super.awakeFromNib()
