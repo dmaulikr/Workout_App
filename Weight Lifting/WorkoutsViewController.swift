@@ -26,6 +26,8 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
         self.title = "Workouts"
         fetchExercises()
         fetchWorkouts()
+        collectionView.reloadData()
+
 
     }
 
@@ -36,7 +38,7 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
         fetchExercises()
         fetchWorkouts()
         
-        
+        collectionView.reloadData()
         
     }
     
@@ -96,6 +98,16 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
         //cell.layer.borderColor = UIColor.light
         return cell
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print("selected \(indexPath.row) named: \((collectionView.cellForItem(at: indexPath) as! WorkoutsCollectionViewCell).workoutTitle.text ?? "No title")")
+        
+        //add view workout screen here
+        
+    }
+    
     
     
     @IBAction func plusButtonClicked(_ sender: Any) {

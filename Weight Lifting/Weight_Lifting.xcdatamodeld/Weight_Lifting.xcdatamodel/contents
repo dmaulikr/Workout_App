@@ -12,8 +12,10 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="workouts" inverseEntity="Exercise" syncable="YES"/>
     </entity>
+    <entity name="WorkoutInstance" representedClassName="WorkoutInstance" syncable="YES" codeGenerationType="class"/>
     <elements>
         <element name="Exercise" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="Workout" positionX="-252" positionY="-19" width="128" height="88"/>
+        <element name="WorkoutInstance" positionX="-153" positionY="27" width="128" height="45"/>
     </elements>
 </model>
