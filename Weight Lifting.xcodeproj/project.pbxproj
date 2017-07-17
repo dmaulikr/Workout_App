@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8545205E1F1C96FA00CD45C6 /* ExerciseToLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545205D1F1C96FA00CD45C6 /* ExerciseToLogTableViewCell.swift */; };
 		8573468A1F149B22004DACE0 /* workouts.png in Resources */ = {isa = PBXBuildFile; fileRef = 857346871F149B22004DACE0 /* workouts.png */; };
 		8573468B1F149B22004DACE0 /* workouts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 857346881F149B22004DACE0 /* workouts@2x.png */; };
 		8573468C1F149B22004DACE0 /* workouts@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 857346891F149B22004DACE0 /* workouts@3x.png */; };
@@ -31,6 +32,7 @@
 		857959471F1C7BD9006756BE /* SearchWorkoutCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857959461F1C7BD9006756BE /* SearchWorkoutCollectionReusableView.swift */; };
 		857959491F1C821B006756BE /* LogWorkoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857959481F1C821B006756BE /* LogWorkoutCollectionViewCell.swift */; };
 		8579594B1F1C88C1006756BE /* LogWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579594A1F1C88C1006756BE /* LogWorkoutTableViewController.swift */; };
+		8579594E1F1C900E006756BE /* SelectDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579594D1F1C900E006756BE /* SelectDateTableViewCell.swift */; };
 		85A1AB831F19FB64004282A3 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB7F1F19FB64004282A3 /* Workout+CoreDataClass.swift */; };
 		85A1AB841F19FB64004282A3 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB801F19FB64004282A3 /* Workout+CoreDataProperties.swift */; };
 		85A1AB851F19FB64004282A3 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB811F19FB64004282A3 /* Exercise+CoreDataClass.swift */; };
@@ -71,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8545205D1F1C96FA00CD45C6 /* ExerciseToLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseToLogTableViewCell.swift; sourceTree = "<group>"; };
 		857346871F149B22004DACE0 /* workouts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workouts.png; sourceTree = "<group>"; };
 		857346881F149B22004DACE0 /* workouts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "workouts@2x.png"; sourceTree = "<group>"; };
 		857346891F149B22004DACE0 /* workouts@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "workouts@3x.png"; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 		857959461F1C7BD9006756BE /* SearchWorkoutCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWorkoutCollectionReusableView.swift; sourceTree = "<group>"; };
 		857959481F1C821B006756BE /* LogWorkoutCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogWorkoutCollectionViewCell.swift; sourceTree = "<group>"; };
 		8579594A1F1C88C1006756BE /* LogWorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogWorkoutTableViewController.swift; sourceTree = "<group>"; };
+		8579594D1F1C900E006756BE /* SelectDateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDateTableViewCell.swift; sourceTree = "<group>"; };
 		85A1AB7F1F19FB64004282A3 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
 		85A1AB801F19FB64004282A3 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		85A1AB811F19FB64004282A3 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				8579594A1F1C88C1006756BE /* LogWorkoutTableViewController.swift */,
+				8579594D1F1C900E006756BE /* SelectDateTableViewCell.swift */,
+				8545205D1F1C96FA00CD45C6 /* ExerciseToLogTableViewCell.swift */,
 			);
 			name = "Log Workout";
 			sourceTree = "<group>";
@@ -427,6 +433,8 @@
 				85A1AB891F19FF01004282A3 /* DatabaseController.swift in Sources */,
 				85D1BCE61F0DB2290054EC4B /* AppDelegate.swift in Sources */,
 				857346921F14ABD7004DACE0 /* CustomImageFlowLayout.swift in Sources */,
+				8579594E1F1C900E006756BE /* SelectDateTableViewCell.swift in Sources */,
+				8545205E1F1C96FA00CD45C6 /* ExerciseToLogTableViewCell.swift in Sources */,
 				85F173011F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
