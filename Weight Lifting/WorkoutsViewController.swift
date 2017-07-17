@@ -13,7 +13,7 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+    var workouts : [Workout] = [Workout]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,8 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
         collectionView.collectionViewLayout = CustomImageFlowLayout()
         
         self.title = "Workouts"
+        fetchExercises()
+        fetchWorkouts()
 
     }
 
@@ -40,21 +42,22 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     
     func fetchWorkouts() {
-        
+        workouts.removeAll(keepingCapacity: false)
         let fetchRequest:NSFetchRequest<Workout> = Workout.fetchRequest()
         
         do{
             let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
-            print("number of workouts: \(searchResults.count)")
             
             for result in searchResults as [Workout]{
+                workouts.append(result)
                 print(result.name ?? "no name given")
             }
         }
         catch{
             print("Error: \(error)")
         }
-        
+        print("number of workouts: \(workouts.count)")
+
     }
     
     
@@ -79,13 +82,15 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        
+        return workouts.count
     }
     
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellIdentifier", for: indexPath) as! WorkoutsCollectionViewCell
-        cell.workoutTitle.text = "hello"
+        cell.workoutTitle.text = workouts[indexPath.row].name
+        cell.workoutImage.image = UIImage(data:workouts[indexPath.row].image! as Data,scale:1.0)
         cell.layer.borderWidth = 5
         cell.layer.borderColor = UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 1.0).cgColor
         //cell.layer.borderColor = UIColor.light

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -265,7 +266,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uv-Ur-c7i">
-                                                    <rect key="frame" x="36" y="9" width="53" height="21"/>
+                                                    <rect key="frame" x="7" y="9" width="110" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -284,7 +285,7 @@
                                             <constraint firstAttribute="bottom" secondItem="A4u-9P-GzZ" secondAttribute="bottom" constant="9" id="IjG-pZ-exg"/>
                                             <constraint firstItem="3uv-Ur-c7i" firstAttribute="top" secondItem="was-BI-gEL" secondAttribute="topMargin" constant="1" id="LEl-XQ-SEX"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="A4u-9P-GzZ" secondAttribute="bottom" constant="1" id="NOH-nz-ZuE"/>
-                                            <constraint firstItem="3uv-Ur-c7i" firstAttribute="leading" secondItem="was-BI-gEL" secondAttribute="leadingMargin" constant="28" id="XAy-2G-ngR"/>
+                                            <constraint firstItem="3uv-Ur-c7i" firstAttribute="leading" secondItem="was-BI-gEL" secondAttribute="leadingMargin" constant="-1" id="XAy-2G-ngR"/>
                                             <constraint firstItem="A4u-9P-GzZ" firstAttribute="top" secondItem="3uv-Ur-c7i" secondAttribute="bottom" constant="8" symbolic="YES" id="i6e-BG-l5s"/>
                                             <constraint firstItem="3uv-Ur-c7i" firstAttribute="centerX" secondItem="A4u-9P-GzZ" secondAttribute="centerX" id="lJ6-RM-FeJ"/>
                                             <constraint firstItem="A4u-9P-GzZ" firstAttribute="trailing" secondItem="was-BI-gEL" secondAttribute="trailingMargin" id="tkb-L6-j5o"/>
@@ -341,7 +342,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="201"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="32j-dK-4YV" id="G7G-Wa-INd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. Leg Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIa-Vg-RMe">
