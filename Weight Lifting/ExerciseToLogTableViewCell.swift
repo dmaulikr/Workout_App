@@ -12,7 +12,7 @@ class ExerciseToLogTableViewCell: UITableViewCell {
 
     
     
-    @IBOutlet weak var exerciseImage: UIImageView!
+    @IBOutlet weak var exerciseImage2: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var numSets: UILabel!
     @IBOutlet weak var numReps: UILabel!

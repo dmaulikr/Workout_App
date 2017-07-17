@@ -84,7 +84,7 @@ class LogWorkoutTableViewController: UIViewController, UITableViewDelegate, UITa
             cell.name.text = exercises[indexPath.row - 1].name
             cell.numSets.text = exercises[indexPath.row - 1].setNum
             cell.numReps.text = exercises[indexPath.row - 1].repNum
-            //cell.imageView?.image = UIImage(data: exercises[indexPath.row - 1].image! as Data,scale:1.0)
+            cell.exerciseImage2.image = UIImage(data: exercises[indexPath.row - 1].image! as Data,scale: 7.0)
             return cell
 
         }
