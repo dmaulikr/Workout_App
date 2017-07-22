@@ -33,6 +33,7 @@ class ExercisesViewController: UIViewController,UITableViewDelegate,UITableViewD
 
     override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(ExercisesViewController.fetchData), name: NSNotification.Name(rawValue: "newExerciseCreated"), object: nil)
+        
     }
     
     

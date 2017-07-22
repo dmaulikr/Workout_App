@@ -26,7 +26,7 @@ class LogWorkoutTableViewController: UIViewController, UITableViewDelegate, UITa
         tableView.dataSource = self
         
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(super.dismissKeyboard))
         tableView.addGestureRecognizer(tap)
         
         

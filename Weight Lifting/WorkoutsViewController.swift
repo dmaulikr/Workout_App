@@ -15,6 +15,8 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     var workouts : [Workout] = [Workout]()
     
+    var chosenWorkout = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -104,11 +106,21 @@ class WorkoutsViewController: UIViewController,UICollectionViewDelegate,UICollec
         
         print("selected \(indexPath.row) named: \((collectionView.cellForItem(at: indexPath) as! WorkoutsCollectionViewCell).workoutTitle.text ?? "No title")")
         
+        self.chosenWorkout = ((collectionView.cellForItem(at: indexPath) as! WorkoutsCollectionViewCell).workoutTitle.text ?? "No title")
+        
+        performSegue(withIdentifier: "workoutListToViewWorkout", sender: nil)
         //add view workout screen here
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "workoutListToViewWorkout") {
+            let destinationVC = segue.destination as! ViewWorkoutViewController
+            destinationVC.selectedWorkout = self.chosenWorkout
+        }
+        
+    }
     
     @IBAction func plusButtonClicked(_ sender: Any) {
         
