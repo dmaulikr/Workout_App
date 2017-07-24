@@ -15,6 +15,8 @@ class WorkoutListForResultsViewController: UIViewController,UICollectionViewDele
     
     var workouts : [Workout] = [Workout]()
     
+    var chosenWorkouts = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,7 +74,28 @@ class WorkoutListForResultsViewController: UIViewController,UICollectionViewDele
         
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print("selected \(indexPath.row) named: \((collectionView.cellForItem(at: indexPath) as! WorkoutForResultsCollectionViewCell).workoutNameLabel.text ?? "No title")")
+        
+        self.chosenWorkouts = ((collectionView.cellForItem(at: indexPath) as! WorkoutForResultsCollectionViewCell).workoutNameLabel.text ?? "No title")
+        
+        performSegue(withIdentifier: "fromResultsWorkoutListToResultsForWorkout", sender: nil)
+        
+    }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "fromResultsWorkoutListToResultsForWorkout") {
+            let destinationVC = segue.destination as! ResultForWorkoutViewController
+            destinationVC.selectedWorkout = self.chosenWorkouts
+        }
+        
+        
+    }
+    
+    
 
 }
 

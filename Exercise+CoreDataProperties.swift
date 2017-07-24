@@ -2,7 +2,7 @@
 //  Exercise+CoreDataProperties.swift
 //  Weight Lifting
 //
-//  Created by Jordan Jacobson on 15/7/17.
+//  Created by Jordan Jacobson on 23/7/17.
 //  Copyright © 2017 Awesome Inc. All rights reserved.
 //
 
@@ -16,6 +16,7 @@ extension Exercise {
         return NSFetchRequest<Exercise>(entityName: "Exercise")
     }
 
+    @NSManaged public var amountLifted: Float
     @NSManaged public var image: NSData?
     @NSManaged public var name: String?
     @NSManaged public var repNum: String?

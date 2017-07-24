@@ -2,7 +2,7 @@
 //  Workout+CoreDataProperties.swift
 //  Weight Lifting
 //
-//  Created by Jordan Jacobson on 15/7/17.
+//  Created by Jordan Jacobson on 23/7/17.
 //  Copyright © 2017 Awesome Inc. All rights reserved.
 //
 
@@ -16,9 +16,10 @@ extension Workout {
         return NSFetchRequest<Workout>(entityName: "Workout")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var image: NSData?
+    @NSManaged public var name: String?
     @NSManaged public var exercises: NSSet?
+    @NSManaged public var session: NSSet?
 
 }
 
@@ -36,5 +37,22 @@ extension Workout {
 
     @objc(removeExercises:)
     @NSManaged public func removeFromExercises(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for session
+extension Workout {
+
+    @objc(addSessionObject:)
+    @NSManaged public func addToSession(_ value: Session)
+
+    @objc(removeSessionObject:)
+    @NSManaged public func removeFromSession(_ value: Session)
+
+    @objc(addSession:)
+    @NSManaged public func addToSession(_ values: NSSet)
+
+    @objc(removeSession:)
+    @NSManaged public func removeFromSession(_ values: NSSet)
 
 }

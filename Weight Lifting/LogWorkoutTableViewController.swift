@@ -62,6 +62,81 @@ class LogWorkoutTableViewController: UIViewController, UITableViewDelegate, UITa
 
     
     @IBAction func saveButtonClicked(_ sender: Any) {
+        
+        
+        /*
+         create session
+         for each exercise create a lift for the exercise
+         save session
+         */
+        
+        var cells : [ExerciseToLogTableViewCell] = [ExerciseToLogTableViewCell]()
+        
+        for cell in self.tableView.visibleCells {
+            if let exerciseCell = cell as? ExerciseToLogTableViewCell {
+                cells.append(exerciseCell)
+            }
+        }
+        
+        for element in cells {
+            print (element.name.text!)
+        }
+        
+        var allEntered : Bool = true
+        
+        for cell in cells {
+            if cell.liftAmountText.text == "" {
+                allEntered = false
+            }
+        }
+        
+        if (allEntered == true) {
+            
+            let newSession : Session = NSEntityDescription.insertNewObject(forEntityName: String(describing: Session.self), into: DatabaseController.getContext()) as! Session
+            
+            for exercise in cells {
+                let newLift : Lift = NSEntityDescription.insertNewObject(forEntityName: String(describing: Lift.self), into: DatabaseController.getContext()) as! Lift
+                newLift.lifted = Int16(exercise.liftAmountText.text!)!
+                
+                
+             
+                
+                for exerciseTemp in exercises {
+                    if (exerciseTemp.name == exercise.name.text) {
+                        newLift.exercise = exerciseTemp
+                    }
+                }
+                
+                newSession.date = (tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! SelectDateTableViewCell).dataPicker.date as NSDate
+                
+                newSession.workout = workout
+                
+                newSession.addToLifts(newLift)
+                
+            }
+            
+            DatabaseController.saveContext()
+
+            
+            
+            
+            _ = self.navigationController?.popViewController(animated: true)
+            
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Please enter a weight for each exercise", preferredStyle: UIAlertControllerStyle.alert)
+            let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
  
     

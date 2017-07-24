@@ -16,7 +16,8 @@ class LogWorkoutViewController: UIViewController,UICollectionViewDelegate,UIColl
     @IBOutlet weak var searchBar: UISearchBar!
     
     var workouts : [Workout] = [Workout]()
-
+    var sessions : [Session] = [Session]()
+    
     var selectedWorkout = ""
     
     override func viewDidLoad() {
@@ -32,9 +33,39 @@ class LogWorkoutViewController: UIViewController,UICollectionViewDelegate,UIColl
     
     override func viewDidAppear(_ animated: Bool) {
         
+        fetchSessions()
+        
         fetchWorkouts()
         
     }
+    
+    
+    func fetchSessions() {
+        
+        sessions.removeAll(keepingCapacity: false)
+        
+        let fetchRequest:NSFetchRequest<Session> = Session.fetchRequest()
+        
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            for result in searchResults as [Session]{
+                sessions.append(result)
+                
+                //print(result.workout?.name ?? "no name given")
+                
+                for lift in Array(result.lifts!) as! [Lift] {
+                    //print("Exercise: \(String(describing: lift.exercise?.name)), lifted: \(lift.lifted)")
+                }
+            }
+        }
+        catch{
+            print("Error: \(error)")
+        }
+        //print("number of sessions: \(sessions.count)")
+        
+    }
+    
     
     func fetchWorkouts() {
         workouts.removeAll(keepingCapacity: false)
@@ -45,13 +76,13 @@ class LogWorkoutViewController: UIViewController,UICollectionViewDelegate,UIColl
             
             for result in searchResults as [Workout]{
                 workouts.append(result)
-                print(result.name ?? "no name given")
+                //print(result.name ?? "no name given")
             }
         }
         catch{
             print("Error: \(error)")
         }
-        print("number of workouts: \(workouts.count)")
+        //print("number of workouts: \(workouts.count)")
         
     }
     

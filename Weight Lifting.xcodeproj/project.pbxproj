@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B00EFE41966690DBB82CD61 /* Pods_Weight_Lifting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D14D8AF0B837835EC201BAC /* Pods_Weight_Lifting.framework */; };
+		853730FC1F2569CB0058E173 /* libQLCharts.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 853730FB1F2569CB0058E173 /* libQLCharts.tbd */; };
+		853730FE1F256AC40058E173 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853730FD1F256AC40058E173 /* Charts.framework */; };
+		853731081F259CB90058E173 /* rightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 853731051F259CB90058E173 /* rightArrow.png */; };
+		853731091F259CB90058E173 /* rightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853731061F259CB90058E173 /* rightArrow@2x.png */; };
+		8537310A1F259CB90058E173 /* rightArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853731071F259CB90058E173 /* rightArrow@3x.png */; };
+		8537310C1F259D2E0058E173 /* ExerciseForResultsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537310B1F259D2E0058E173 /* ExerciseForResultsListTableViewCell.swift */; };
 		8545205E1F1C96FA00CD45C6 /* ExerciseToLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545205D1F1C96FA00CD45C6 /* ExerciseToLogTableViewCell.swift */; };
 		856C88011F2071C700EB3A49 /* ThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856C88001F2071C700EB3A49 /* ThemeTableViewCell.swift */; };
 		856C88051F20B42500EB3A49 /* expand.png in Resources */ = {isa = PBXBuildFile; fileRef = 856C88021F20B42500EB3A49 /* expand.png */; };
@@ -47,10 +54,15 @@
 		857959491F1C821B006756BE /* LogWorkoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857959481F1C821B006756BE /* LogWorkoutCollectionViewCell.swift */; };
 		8579594B1F1C88C1006756BE /* LogWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579594A1F1C88C1006756BE /* LogWorkoutTableViewController.swift */; };
 		8579594E1F1C900E006756BE /* SelectDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579594D1F1C900E006756BE /* SelectDateTableViewCell.swift */; };
-		85A1AB831F19FB64004282A3 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB7F1F19FB64004282A3 /* Workout+CoreDataClass.swift */; };
-		85A1AB841F19FB64004282A3 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB801F19FB64004282A3 /* Workout+CoreDataProperties.swift */; };
-		85A1AB851F19FB64004282A3 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB811F19FB64004282A3 /* Exercise+CoreDataClass.swift */; };
-		85A1AB861F19FB64004282A3 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB821F19FB64004282A3 /* Exercise+CoreDataProperties.swift */; };
+		85865D981F249C1000A32B3B /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85865D901F249C1000A32B3B /* Exercise+CoreDataClass.swift */; };
+		85865D991F249C1000A32B3B /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85865D911F249C1000A32B3B /* Exercise+CoreDataProperties.swift */; };
+		85865D9A1F249C1000A32B3B /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85865D921F249C1000A32B3B /* Workout+CoreDataClass.swift */; };
+		85865D9B1F249C1000A32B3B /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85865D931F249C1000A32B3B /* Workout+CoreDataProperties.swift */; };
+		85865D9C1F249C1000A32B3B /* Lift+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85865D941F249C1000A32B3B /* Lift+CoreDataClass.swift */; };
+		85865D9D1F249C1000A32B3B /* Lift+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85865D951F249C1000A32B3B /* Lift+CoreDataProperties.swift */; };
+		85865D9E1F249C1000A32B3B /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85865D961F249C1000A32B3B /* Session+CoreDataClass.swift */; };
+		85865D9F1F249C1000A32B3B /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85865D971F249C1000A32B3B /* Session+CoreDataProperties.swift */; };
+		85865DA21F24DA9900A32B3B /* ResultForWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85865DA11F24DA9900A32B3B /* ResultForWorkoutViewController.swift */; };
 		85A1AB891F19FF01004282A3 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1AB881F19FF01004282A3 /* DatabaseController.swift */; };
 		85D1BCE61F0DB2290054EC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1BCE51F0DB2290054EC4B /* AppDelegate.swift */; };
 		85D1BCE81F0DB2290054EC4B /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1BCE71F0DB2290054EC4B /* WorkoutsViewController.swift */; };
@@ -90,6 +102,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D14D8AF0B837835EC201BAC /* Pods_Weight_Lifting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weight_Lifting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F0025E4528AC14BBFAFEFD /* Pods-Weight Lifting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weight Lifting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weight Lifting/Pods-Weight Lifting.debug.xcconfig"; sourceTree = "<group>"; };
+		853730FB1F2569CB0058E173 /* libQLCharts.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libQLCharts.tbd; path = usr/lib/libQLCharts.tbd; sourceTree = SDKROOT; };
+		853730FD1F256AC40058E173 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/Weight_Lifting-fzbbwetrahqvkqebuitnzjpvpewl/Build/Products/Debug-iphonesimulator/Charts/Charts.framework"; sourceTree = "<group>"; };
+		853731051F259CB90058E173 /* rightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrow.png; sourceTree = "<group>"; };
+		853731061F259CB90058E173 /* rightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightArrow@2x.png"; sourceTree = "<group>"; };
+		853731071F259CB90058E173 /* rightArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightArrow@3x.png"; sourceTree = "<group>"; };
+		8537310B1F259D2E0058E173 /* ExerciseForResultsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseForResultsListTableViewCell.swift; sourceTree = "<group>"; };
 		8545205D1F1C96FA00CD45C6 /* ExerciseToLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseToLogTableViewCell.swift; sourceTree = "<group>"; };
 		856C88001F2071C700EB3A49 /* ThemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableViewCell.swift; sourceTree = "<group>"; };
 		856C88021F20B42500EB3A49 /* expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expand.png; sourceTree = "<group>"; };
@@ -130,10 +150,15 @@
 		857959481F1C821B006756BE /* LogWorkoutCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogWorkoutCollectionViewCell.swift; sourceTree = "<group>"; };
 		8579594A1F1C88C1006756BE /* LogWorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogWorkoutTableViewController.swift; sourceTree = "<group>"; };
 		8579594D1F1C900E006756BE /* SelectDateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDateTableViewCell.swift; sourceTree = "<group>"; };
-		85A1AB7F1F19FB64004282A3 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
-		85A1AB801F19FB64004282A3 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		85A1AB811F19FB64004282A3 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
-		85A1AB821F19FB64004282A3 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85865D901F249C1000A32B3B /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Exercise+CoreDataClass.swift"; path = "../Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
+		85865D911F249C1000A32B3B /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Exercise+CoreDataProperties.swift"; path = "../Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85865D921F249C1000A32B3B /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataClass.swift"; path = "../Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		85865D931F249C1000A32B3B /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataProperties.swift"; path = "../Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85865D941F249C1000A32B3B /* Lift+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Lift+CoreDataClass.swift"; path = "../Lift+CoreDataClass.swift"; sourceTree = "<group>"; };
+		85865D951F249C1000A32B3B /* Lift+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Lift+CoreDataProperties.swift"; path = "../Lift+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85865D961F249C1000A32B3B /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataClass.swift"; path = "../Session+CoreDataClass.swift"; sourceTree = "<group>"; };
+		85865D971F249C1000A32B3B /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataProperties.swift"; path = "../Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85865DA11F24DA9900A32B3B /* ResultForWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultForWorkoutViewController.swift; sourceTree = "<group>"; };
 		85A1AB881F19FF01004282A3 /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		85A1AB8A1F1B537F004282A3 /* Weight_Lifting 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Weight_Lifting 2.xcdatamodel"; sourceTree = "<group>"; };
 		85D1BCE21F0DB2290054EC4B /* Weight Lifting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weight Lifting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +198,7 @@
 		85F1731C1F16223B006E6A4C /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		85F1731D1F16223B006E6A4C /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		85F1731E1F16223B006E6A4C /* arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@3x.png"; sourceTree = "<group>"; };
+		EBC37445BC1BC946DB2EAEC2 /* Pods-Weight Lifting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weight Lifting.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weight Lifting/Pods-Weight Lifting.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +206,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853730FE1F256AC40058E173 /* Charts.framework in Frameworks */,
+				853730FC1F2569CB0058E173 /* libQLCharts.tbd in Frameworks */,
+				4B00EFE41966690DBB82CD61 /* Pods_Weight_Lifting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +218,9 @@
 		857346861F149B11004DACE0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				853731051F259CB90058E173 /* rightArrow.png */,
+				853731061F259CB90058E173 /* rightArrow@2x.png */,
+				853731071F259CB90058E173 /* rightArrow@3x.png */,
 				856C88021F20B42500EB3A49 /* expand.png */,
 				856C88031F20B42500EB3A49 /* expand@2x.png */,
 				856C88041F20B42500EB3A49 /* expand@3x.png */,
@@ -238,13 +270,13 @@
 			name = images;
 			sourceTree = "<group>";
 		};
-		857715FA1F1E1B160030C40F /* Results */ = {
+		857715FA1F1E1B160030C40F /* Results Workout List */ = {
 			isa = PBXGroup;
 			children = (
 				857715FB1F1E1B6B0030C40F /* WorkoutListForResultsViewController.swift */,
 				857715FF1F1E1F5C0030C40F /* WorkoutForResultsCollectionViewCell.swift */,
 			);
-			name = Results;
+			name = "Results Workout List";
 			sourceTree = "<group>";
 		};
 		857716011F1E24450030C40F /* Settings */ = {
@@ -277,13 +309,26 @@
 			name = "Log Workout";
 			sourceTree = "<group>";
 		};
+		85865DA01F24DA6400A32B3B /* Result For Workout */ = {
+			isa = PBXGroup;
+			children = (
+				85865DA11F24DA9900A32B3B /* ResultForWorkoutViewController.swift */,
+				8537310B1F259D2E0058E173 /* ExerciseForResultsListTableViewCell.swift */,
+			);
+			name = "Result For Workout";
+			sourceTree = "<group>";
+		};
 		85A1AB871F19FB8D004282A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				85A1AB7F1F19FB64004282A3 /* Workout+CoreDataClass.swift */,
-				85A1AB801F19FB64004282A3 /* Workout+CoreDataProperties.swift */,
-				85A1AB811F19FB64004282A3 /* Exercise+CoreDataClass.swift */,
-				85A1AB821F19FB64004282A3 /* Exercise+CoreDataProperties.swift */,
+				85865D901F249C1000A32B3B /* Exercise+CoreDataClass.swift */,
+				85865D911F249C1000A32B3B /* Exercise+CoreDataProperties.swift */,
+				85865D921F249C1000A32B3B /* Workout+CoreDataClass.swift */,
+				85865D931F249C1000A32B3B /* Workout+CoreDataProperties.swift */,
+				85865D941F249C1000A32B3B /* Lift+CoreDataClass.swift */,
+				85865D951F249C1000A32B3B /* Lift+CoreDataProperties.swift */,
+				85865D961F249C1000A32B3B /* Session+CoreDataClass.swift */,
+				85865D971F249C1000A32B3B /* Session+CoreDataProperties.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -293,6 +338,8 @@
 			children = (
 				85D1BCE41F0DB2290054EC4B /* Weight Lifting */,
 				85D1BCE31F0DB2290054EC4B /* Products */,
+				F46ABD47689D9A11948D7FD2 /* Pods */,
+				EE951BC05A5AF2C4272DCE47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -318,7 +365,8 @@
 				85F173051F15D20A006E6A4C /* Add Workout Screen */,
 				85F173061F15D280006E6A4C /* Add Exercise to Workout */,
 				85F173091F15D396006E6A4C /* Exercises */,
-				857715FA1F1E1B160030C40F /* Results */,
+				857715FA1F1E1B160030C40F /* Results Workout List */,
+				85865DA01F24DA6400A32B3B /* Result For Workout */,
 				857716011F1E24450030C40F /* Settings */,
 				85D1BCE91F0DB2290054EC4B /* Main.storyboard */,
 				85D1BCEF1F0DB2290054EC4B /* Assets.xcassets */,
@@ -378,6 +426,25 @@
 			name = Exercises;
 			sourceTree = "<group>";
 		};
+		EE951BC05A5AF2C4272DCE47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				853730FD1F256AC40058E173 /* Charts.framework */,
+				853730FB1F2569CB0058E173 /* libQLCharts.tbd */,
+				4D14D8AF0B837835EC201BAC /* Pods_Weight_Lifting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F46ABD47689D9A11948D7FD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51F0025E4528AC14BBFAFEFD /* Pods-Weight Lifting.debug.xcconfig */,
+				EBC37445BC1BC946DB2EAEC2 /* Pods-Weight Lifting.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -385,9 +452,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85D1BCF71F0DB2290054EC4B /* Build configuration list for PBXNativeTarget "Weight Lifting" */;
 			buildPhases = (
+				2B006CAB50FC3DB570B260A9 /* [CP] Check Pods Manifest.lock */,
 				85D1BCDE1F0DB2290054EC4B /* Sources */,
 				85D1BCDF1F0DB2290054EC4B /* Frameworks */,
 				85D1BCE01F0DB2290054EC4B /* Resources */,
+				F2D1A9081A654FFB1D9437BF /* [CP] Embed Pods Frameworks */,
+				BCBF3D6C740906F9CB87C2C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -465,6 +535,7 @@
 				8573468A1F149B22004DACE0 /* workouts.png in Resources */,
 				85F173121F161B37006E6A4C /* tickedCircle@3x.png in Resources */,
 				857346961F14B118004DACE0 /* placeholder.png in Resources */,
+				853731091F259CB90058E173 /* rightArrow@2x.png in Resources */,
 				857715F91F1E1A7C0030C40F /* results@3x.png in Resources */,
 				85D834ED1F1879950068A9B7 /* record@2x.png in Resources */,
 				85D834E81F172C9F0068A9B7 /* save@3x.png in Resources */,
@@ -475,6 +546,7 @@
 				857346B01F14C1F8004DACE0 /* placeholderForAddExercise@3x.png in Resources */,
 				85D834E71F172C9F0068A9B7 /* save@2x.png in Resources */,
 				85D1BCF01F0DB2290054EC4B /* Assets.xcassets in Resources */,
+				8537310A1F259CB90058E173 /* rightArrow@3x.png in Resources */,
 				85D1BCEB1F0DB2290054EC4B /* Main.storyboard in Resources */,
 				85D834E61F172C9F0068A9B7 /* save.png in Resources */,
 				857346A91F14C073004DACE0 /* chooseImage@2x.png in Resources */,
@@ -482,6 +554,7 @@
 				85F173211F16223B006E6A4C /* arrow@3x.png in Resources */,
 				857715EB1F1E16E50030C40F /* logo.png in Resources */,
 				856C88071F20B42500EB3A49 /* expand@3x.png in Resources */,
+				853731081F259CB90058E173 /* rightArrow.png in Resources */,
 				85D834F41F187AB00068A9B7 /* settings.png in Resources */,
 				85D834DC1F1725BF0068A9B7 /* placeholderForAddImageToWorkout@3x.png in Resources */,
 				857715ED1F1E16E50030C40F /* logo@3x.png in Resources */,
@@ -491,31 +564,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B006CAB50FC3DB570B260A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCBF3D6C740906F9CB87C2C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Weight Lifting/Pods-Weight Lifting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D1A9081A654FFB1D9437BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Weight Lifting/Pods-Weight Lifting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85D1BCDE1F0DB2290054EC4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85865D9F1F249C1000A32B3B /* Session+CoreDataProperties.swift in Sources */,
 				85F172FF1F15AD66006E6A4C /* WorkoutNameTableViewCell.swift in Sources */,
 				8573468E1F149EC4004DACE0 /* WorkoutsCollectionViewCell.swift in Sources */,
-				85A1AB861F19FB64004282A3 /* Exercise+CoreDataProperties.swift in Sources */,
+				85865D9B1F249C1000A32B3B /* Workout+CoreDataProperties.swift in Sources */,
+				8537310C1F259D2E0058E173 /* ExerciseForResultsListTableViewCell.swift in Sources */,
 				857715FC1F1E1B6B0030C40F /* WorkoutListForResultsViewController.swift in Sources */,
 				857959471F1C7BD9006756BE /* SearchWorkoutCollectionReusableView.swift in Sources */,
+				85865D981F249C1000A32B3B /* Exercise+CoreDataClass.swift in Sources */,
+				85865D9D1F249C1000A32B3B /* Lift+CoreDataProperties.swift in Sources */,
 				85F173081F15D333006E6A4C /* ExerciseWithButtonTableViewCell.swift in Sources */,
-				85A1AB851F19FB64004282A3 /* Exercise+CoreDataClass.swift in Sources */,
+				85865D9A1F249C1000A32B3B /* Workout+CoreDataClass.swift in Sources */,
 				85F172FD1F15AA1D006E6A4C /* ExerciseForWorkoutTableViewCell.swift in Sources */,
 				857959441F1C7B89006756BE /* LogWorkoutViewController.swift in Sources */,
 				85E259681F1CCF8E00207781 /* ViewWorkoutViewController.swift in Sources */,
 				85D1BCE81F0DB2290054EC4B /* WorkoutsViewController.swift in Sources */,
+				85865D9C1F249C1000A32B3B /* Lift+CoreDataClass.swift in Sources */,
 				85F172FB1F15A6D2006E6A4C /* AddWorkoutViewController.swift in Sources */,
-				85A1AB841F19FB64004282A3 /* Workout+CoreDataProperties.swift in Sources */,
 				857346A41F14BF2E004DACE0 /* AddExerciseViewController.swift in Sources */,
 				8579594B1F1C88C1006756BE /* LogWorkoutTableViewController.swift in Sources */,
-				85A1AB831F19FB64004282A3 /* Workout+CoreDataClass.swift in Sources */,
 				8573469A1F14B4F6004DACE0 /* ExercisesViewController.swift in Sources */,
 				857959491F1C821B006756BE /* LogWorkoutCollectionViewCell.swift in Sources */,
 				85E2596B1F1CD21400207781 /* WorkoutNameForViewWorkoutTableViewCell.swift in Sources */,
 				8573469C1F14B54C004DACE0 /* ExerciseTableViewCell.swift in Sources */,
+				85865D991F249C1000A32B3B /* Exercise+CoreDataProperties.swift in Sources */,
+				85865DA21F24DA9900A32B3B /* ResultForWorkoutViewController.swift in Sources */,
 				85D1BCEE1F0DB2290054EC4B /* Weight_Lifting.xcdatamodeld in Sources */,
 				85A1AB891F19FF01004282A3 /* DatabaseController.swift in Sources */,
 				85D1BCE61F0DB2290054EC4B /* AppDelegate.swift in Sources */,
@@ -527,6 +653,7 @@
 				857716001F1E1F5C0030C40F /* WorkoutForResultsCollectionViewCell.swift in Sources */,
 				8545205E1F1C96FA00CD45C6 /* ExerciseToLogTableViewCell.swift in Sources */,
 				85F173011F15CCDB006E6A4C /* ExerciseListToForWorkoutViewController.swift in Sources */,
+				85865D9E1F249C1000A32B3B /* Session+CoreDataClass.swift in Sources */,
 				85E2596F1F1CD5D000207781 /* ExerciseDetailsForViewWorkoutTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +777,7 @@
 		};
 		85D1BCF81F0DB2290054EC4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51F0025E4528AC14BBFAFEFD /* Pods-Weight Lifting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R5TMPRGGM5;
@@ -663,6 +791,7 @@
 		};
 		85D1BCF91F0DB2290054EC4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBC37445BC1BC946DB2EAEC2 /* Pods-Weight Lifting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R5TMPRGGM5;
