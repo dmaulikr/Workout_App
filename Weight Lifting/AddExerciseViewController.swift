@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class AddExerciseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var repNumText: UITextField!
     @IBOutlet weak var setNumText: UITextField!
@@ -34,7 +34,7 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
         
         if (chosenExercise != "") {
             let context = DatabaseController.getContext()
-
+            
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
             fetchRequest.predicate = NSPredicate(format: "name = %@", self.chosenExercise)
             fetchRequest.returnsObjectsAsFaults = false
@@ -65,7 +65,7 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
             } catch {
                 print("error")
             }
-
+            
         } else {
             nameText.text = ""
             repNumText.text = ""
@@ -73,7 +73,7 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
             imageView.image = UIImage(named: "placeholderForAddExercise.png")
         }
     }
-
+    
     func photoLibrary() {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -101,7 +101,7 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
         //picker.delegate = self
         
         let actionSheet = UIAlertController(title: "Photo library or Camera", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
-
+        
         let camera = UIAlertAction(title: "Camera", style: UIAlertActionStyle.default) { (UIAlertAction) in
             self.camera()
         }
@@ -119,18 +119,90 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
         
     }
     
+    
+    func saveData() {
+        let newExercise : Exercise = NSEntityDescription.insertNewObject(forEntityName: String(describing: Exercise.self), into: DatabaseController.getContext()) as! Exercise
+        newExercise.name = self.nameText.text
+        newExercise.repNum = self.repNumText.text
+        newExercise.setNum = self.setNumText.text
+        newExercise.image = UIImageJPEGRepresentation(self.imageView.image!, 1)! as NSData
+        DatabaseController.saveContext()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newExerciseCreated"), object: nil)
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
     @IBAction func saveButtonClicked(_ sender: Any) {
         
         
         
         
         if (self.chosenExercise == "") {
-            let newExercise : Exercise = NSEntityDescription.insertNewObject(forEntityName: String(describing: Exercise.self), into: DatabaseController.getContext()) as! Exercise
-            newExercise.name = nameText.text
-            newExercise.repNum = repNumText.text
-            newExercise.setNum = setNumText.text
-            newExercise.image = UIImageJPEGRepresentation(imageView.image!, 1)! as NSData
-            DatabaseController.saveContext()
+            
+            if (nameText.text != "") {
+                
+                
+                do {
+                    
+                    // Check whether an exercise of the same name has been entered
+                    let fetchRequest: NSFetchRequest<Exercise> = Exercise.fetchRequest()
+                    fetchRequest.predicate = NSPredicate(format: "name = %@", nameText.text!)
+                    fetchRequest.returnsObjectsAsFaults = false
+                    let context = DatabaseController.getContext()
+                    let results = try context.fetch(fetchRequest)
+                    
+                    if results.count == 0 {
+                        
+                        // Check if number of sets has been entered
+                        if (setNumText.text == "" || repNumText.text == "") {
+                            
+                            var warningMessage : String = ""
+                            if ((setNumText.text! == "") && (repNumText.text! == "")) {
+                                warningMessage = "You have not entered an amount of sets or reps"
+                            } else if (!(setNumText.text! == "") && (repNumText.text == "")) {
+                                warningMessage = "You have not entered an amount of reps"
+                            } else if ((setNumText.text! == "") && !(repNumText.text == "")) {
+                                warningMessage = "You have not entered an amount of sets"
+                            }
+                            
+                            let alert = UIAlertController(title: "Warning", message: warningMessage, preferredStyle: UIAlertControllerStyle.alert)
+                            let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+                            
+                            let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+                                
+                                self.saveData()
+                              
+                            })
+                            
+                            alert.addAction(cancel)
+                            alert.addAction(ok)
+                            self.present(alert, animated: true, completion: nil)
+                            
+                        } else {
+                            saveData()
+                        }
+                        
+                    } else {
+                        let alert = UIAlertController(title: "Error", message: "You already have an exercise with the same name", preferredStyle: UIAlertControllerStyle.alert)
+                        let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+                        alert.addAction(ok)
+                        self.present(alert, animated: true, completion: nil)
+                        
+                    }
+                } catch {
+                    print("error")
+                }
+                
+                
+                
+                
+            } else {
+                let alert = UIAlertController(title: "Error", message: "Please enter an exercise name", preferredStyle: UIAlertControllerStyle.alert)
+                let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)            }
+            
         } else {
             
             let fetchRequest:NSFetchRequest<Exercise> = Exercise.fetchRequest()
@@ -140,7 +212,7 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
             
             do {
                 let context = DatabaseController.getContext()
-
+                
                 let results = try context.fetch(fetchRequest)
                 
                 if results.count > 0 {
@@ -153,7 +225,7 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
                     }
                 }
                 try context.save()
-
+                
             } catch {
                 print("error")
             }
@@ -162,12 +234,11 @@ class AddExerciseViewController: UIViewController, UIImagePickerControllerDelega
             
         }
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newExerciseCreated"), object: nil)
-        _ = self.navigationController?.popViewController(animated: true)
+        
         
         
     }
-
+    
 }
 
 

@@ -20,6 +20,11 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
     var exercises : [Exercise] = [Exercise]()
     var workout : Workout = Workout()
     
+    var colorsForGraph : [[NSUIColor]] = [[NSUIColor.blue], [NSUIColor.red], [NSUIColor.purple], [NSUIColor.orange], [NSUIColor.gray],
+                                          [NSUIColor.black], [NSUIColor.brown], [NSUIColor.cyan], [NSUIColor.darkGray], [NSUIColor.green]]
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,8 +50,99 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
         }
         
         self.title = workout.name
+        updateChartWithData()
     }
 
+    func updateChartWithData() {
+       
+        
+        if (workout.session?.count)! > 0 {
+
+            
+            var results : [String: [[NSDate:Int]]] = [String: [[NSDate:Int]]]()
+            
+            for exercise in workout.exercises?.allObjects as! [Exercise] {
+                results[exercise.name!] = []
+            }
+            
+            let sessions = workout.session?.allObjects as! [Session]
+        
+            for session in sessions {
+                print("Session Date: ",terminator: "")
+                print(session.date ?? "no date provided")
+                let lifts = session.lifts?.allObjects as! [Lift]
+                
+                for lift in lifts {
+                    print("\(lift.exercise!.name ?? "no name provided"): \(lift.lifted)kg")
+                    results[lift.exercise!.name!]?.append([session.date! : Int(lift.lifted)])
+                    
+                }
+                
+            }
+            
+            print("Results size: \(results.count)")
+            
+            
+            var graphResults : [String:[ChartDataEntry]] = [String:[ChartDataEntry]]()
+            
+            for exercise in workout.exercises?.allObjects as! [Exercise] {
+                graphResults[exercise.name!] = []
+            }
+            
+            
+
+            for exercise in results.keys {
+                var i = 0
+                var ySeries : [ChartDataEntry] = []
+                for allExercise in results[exercise]! {
+                    
+                    for date in allExercise.keys {
+                        print("\(exercise) on date \(date): \(allExercise[date]!)kg")
+                        
+                        ySeries.append(ChartDataEntry(x: Double(i), y: Double(allExercise[date]!)))
+                        
+                        
+                        i += 1
+                    }
+                    
+                }
+                graphResults[exercise] = ySeries
+                
+                
+            }
+            
+            let data = LineChartData()
+            
+            var colorCode = 0
+            for key in graphResults {
+                let dataset = LineChartDataSet(values: graphResults[key.key], label: key.key)
+                dataset.colors = colorsForGraph[colorCode % colorsForGraph.count]
+                data.addDataSet(dataset)
+                colorCode = colorCode + 1
+
+            }
+            //let dataset = LineChartDataSet(values: ySeries, label: "Hello")
+            
+            
+            self.chartView.data = data
+            
+        }
+        
+        
+        
+        
+        self.chartView.gridBackgroundColor = NSUIColor.white
+        self.chartView.xAxis.drawGridLinesEnabled = false;
+        self.chartView.xAxis.labelPosition = XAxis.LabelPosition.bottom
+
+        //self.chartView.chartDescription?.text = "LineChartView Example"
+        
+        
+        self.chartView.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
+
+        
+    }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
