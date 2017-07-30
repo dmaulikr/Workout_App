@@ -299,7 +299,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vvP-eY-dyY">
-                                                    <rect key="frame" x="6" y="38" width="359" height="113"/>
+                                                    <rect key="frame" x="1" y="38" width="363" height="113"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="521964878.18563497">
                                                         <!--2017-07-17 06:14:38 +0000-->
@@ -1346,7 +1346,7 @@
                     <connections>
                         <outlet property="chartView" destination="Fh0-3H-GVz" id="1xd-vu-lVk"/>
                         <outlet property="tableView" destination="hbQ-L3-t9A" id="uf2-Af-U7J"/>
-                        <segue destination="9Fy-wd-NDv" kind="show" id="Tcl-OR-fu1"/>
+                        <segue destination="9Fy-wd-NDv" kind="show" identifier="fromResultsForWorkoutToResultsForExercise" id="Tcl-OR-fu1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzY-4h-G6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1453,7 +1453,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="a date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIb-um-6Z2">
-                                                    <rect key="frame" x="79" y="8" width="48" height="21"/>
+                                                    <rect key="frame" x="79" y="8" width="255" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

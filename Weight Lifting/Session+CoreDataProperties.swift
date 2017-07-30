@@ -1,9 +1,9 @@
 //
 //  Session+CoreDataProperties.swift
-//  Weight Lifting
+//  
 //
-//  Created by Jordan Jacobson on 23/7/17.
-//  Copyright © 2017 Awesome Inc. All rights reserved.
+//  Created by Jordan Jacobson on 30/7/17.
+//
 //
 
 import Foundation
@@ -17,8 +17,8 @@ extension Session {
     }
 
     @NSManaged public var date: NSDate?
-    @NSManaged public var workout: Workout?
     @NSManaged public var lifts: NSSet?
+    @NSManaged public var workout: Workout?
 
 }
 

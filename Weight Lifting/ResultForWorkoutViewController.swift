@@ -16,6 +16,7 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var tableView: UITableView!
     
     var selectedWorkout = ""
+    var chosenExercise = ""
     
     var exercises : [Exercise] = [Exercise]()
     var workout : Workout = Workout()
@@ -184,13 +185,27 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
         self.chartView.gridBackgroundColor = NSUIColor.white
         self.chartView.xAxis.drawGridLinesEnabled = false;
         self.chartView.xAxis.labelPosition = XAxis.LabelPosition.bottom
-        
-        //self.chartView.chartDescription?.text = "LineChartView Example"
+
+        self.chartView.chartDescription?.text = workout.name
         
         
         self.chartView.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
         
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "fromResultsForWorkoutToResultsForExercise") {
+            let destinationVC = segue.destination as! ResultForExerciseViewController
+            destinationVC.selectedExercise = self.chosenExercise
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.chosenExercise = ((tableView.cellForRow(at: indexPath) as! ExerciseForResultsListTableViewCell).exerciseNameLabel.text ?? "No title")
+        performSegue(withIdentifier: "fromResultsForWorkoutToResultsForExercise", sender: nil)
+
     }
     
     
