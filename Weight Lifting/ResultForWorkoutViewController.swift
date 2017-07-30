@@ -60,25 +60,23 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
             var value : Int
         }
         
-        var resultsObject = [String:[objectStruct]]()
+        var exercisesLifts = [String:[objectStruct]]()
+        
+        
         var referenceTimeInterval: TimeInterval = 0
         
         if (workout.session?.count)! > 0 {
             
             
-            var results : [String: [[NSDate:Int]]] = [String: [[NSDate:Int]]]()
-            
-            
-            // Initialise resultsObject[]
+            // Initialise exercisesLifts[]
             for exercise in workout.exercises?.allObjects as! [Exercise] {
-                results[exercise.name!] = []
-                resultsObject[exercise.name!] = []
+                exercisesLifts[exercise.name!] = []
             }
             
             
             
             
-            // Populate resultsObject[]
+            // Populate exercisesLifts[]
             for session in workout.session?.allObjects as! [Session] {
                 print("Session Date: ",terminator: "")
                 print(session.date ?? "no date provided")
@@ -86,10 +84,9 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
                 
                 for lift in lifts {
                     print("\(lift.exercise!.name ?? "no name provided"): \(lift.lifted)kg")
-                    results[lift.exercise!.name!]?.append([session.date! : Int(lift.lifted)])
                     
                     let newLift = objectStruct(date: session.date! as Date, value: Int(lift.lifted))
-                    resultsObject[lift.exercise!.name!]?.append(newLift)
+                    exercisesLifts[lift.exercise!.name!]?.append(newLift)
                     
                 }
                 
@@ -97,17 +94,17 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
             
             
             //sort array in results object
-            for exercise in resultsObject.keys {
+            for exercise in exercisesLifts.keys {
                 
-               var  sortedAboveIndex = resultsObject[exercise]!.count
+               var  sortedAboveIndex = exercisesLifts[exercise]!.count
                 repeat {
                     var lastSwapIndex = 0
                     
                     for i in 1..<sortedAboveIndex {
-                        if (((resultsObject[exercise]![i - 1] ).date) > (resultsObject[exercise]![i]).date) {
-                            let temp: objectStruct = (resultsObject[exercise]![i - 1] )
-                            resultsObject[exercise]![i - 1] = (resultsObject[exercise]![i] )
-                            resultsObject[exercise]![i]  = temp
+                        if (((exercisesLifts[exercise]![i - 1] ).date) > (exercisesLifts[exercise]![i]).date) {
+                            let temp: objectStruct = (exercisesLifts[exercise]![i - 1] )
+                            exercisesLifts[exercise]![i - 1] = (exercisesLifts[exercise]![i] )
+                            exercisesLifts[exercise]![i]  = temp
                             
                             lastSwapIndex = i
                         }
@@ -119,11 +116,7 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
                 
             }
             
-            
-            
-            
-            print("Results size: \(results.count)")
-            
+        
             
             var graphResults : [String:[ChartDataEntry]] = [String:[ChartDataEntry]]()
             
@@ -133,16 +126,16 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
             
             
             // For each exercise, create a line to add to the chart
-            for exercise in resultsObject.keys {
+            for exercise in exercisesLifts.keys {
                 
-                if let minTimeInterval = ((resultsObject[exercise]!).map { $0.date.timeIntervalSince1970 }).min() {
+                if let minTimeInterval = ((exercisesLifts[exercise]!).map { $0.date.timeIntervalSince1970 }).min() {
                     referenceTimeInterval = minTimeInterval
                 }
                 
                 
                 // Define chart entries for each lift in the exercise
                 var entries = [ChartDataEntry]()
-                for object in resultsObject[exercise]! {
+                for object in exercisesLifts[exercise]! {
                     let timeInterval = object.date.timeIntervalSince1970
                     let xValue = (timeInterval - referenceTimeInterval) / (3600 * 24)
                     
@@ -155,18 +148,7 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
                 graphResults[exercise] = entries
                 
             }
-            
-            
-            // change hashmap into array of struct
-            
-            struct graphResultsStruct {
-                var exercise : String
-                var data : [ChartData]
-            }
-            
-            
-            // Sort array of struct by Date
-            
+    
             
             
             // Add the datasets to the data
@@ -176,7 +158,10 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
                 
                 let dataset = LineChartDataSet(values: graphResults[key.key], label: key.key)
                 dataset.colors = colorsForGraph[colorCode % colorsForGraph.count]
-                
+                dataset.drawCirclesEnabled = true
+                dataset.drawCircleHoleEnabled = false
+                dataset.circleRadius = CGFloat(2)
+                dataset.circleColors = [NSUIColor.black]
                 data.addDataSet(dataset)
                 colorCode = colorCode + 1
                 
@@ -195,6 +180,7 @@ class ResultForWorkoutViewController: UIViewController, UITableViewDelegate, UIT
         let xValuesNumberFormatter = ChartXAxisFormatter(referenceTimeInterval: referenceTimeInterval, dateFormatter: formatter)
         chartView.xAxis.valueFormatter = xValuesNumberFormatter
         
+        self.chartView.data?.setDrawValues(false)
         self.chartView.gridBackgroundColor = NSUIColor.white
         self.chartView.xAxis.drawGridLinesEnabled = false;
         self.chartView.xAxis.labelPosition = XAxis.LabelPosition.bottom
