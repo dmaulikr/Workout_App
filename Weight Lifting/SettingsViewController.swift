@@ -24,6 +24,9 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
 
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 168
+        
     }
 
 
@@ -41,6 +44,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         var selectedRowIndex = indexPath
@@ -50,7 +54,8 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.endUpdates()
         
     }
-    
+    */
+    /*
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -77,7 +82,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
     }
-    
+    */
 }
 
 

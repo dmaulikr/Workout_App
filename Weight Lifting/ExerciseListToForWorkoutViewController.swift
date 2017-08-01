@@ -41,7 +41,7 @@ class ExerciseListToForWorkoutViewController: UIViewController,UITableViewDataSo
     }
     
     @IBAction func saveButtonClicked(_ sender: Any) {
-        
+        print("selectedExercises are:")
         for element in selectedExercises {
             print (element)
         }
@@ -135,11 +135,34 @@ class ExerciseListToForWorkoutViewController: UIViewController,UITableViewDataSo
         cell.setNumLabel.text = setNumArray[indexPath.row]
         cell.exerciseImageView.image = imageArray[indexPath.row]
         
+        
+        let cells = self.exerciseTableView.visibleCells as! Array<ExerciseWithButtonTableViewCell>
+        
+        for cellToChange in cells {
+            if (cellToChange.imageSelected == true) {
+                if (cellToChange.exerciseNameLabel.text != "") {
+                    if (!selectedExercises.contains(cellToChange.exerciseNameLabel.text!)){
+                        selectedExercises.append(cellToChange.exerciseNameLabel.text!)
+                    }
+                }
+            } else {
+                if (selectedExercises.contains(cellToChange.exerciseNameLabel.text!)) {
+                    if let index = selectedExercises.index(of: cellToChange.exerciseNameLabel.text!) {
+                        selectedExercises.remove(at: index)
+                    }
+                }
+            }
+        }
+
+        
+        
         if (alreadyTicked(name: exerciseNameArray[indexPath.row],nameArray: selectedExercises)) {
+            print("\(selectedExercises) does contain \(exerciseNameArray[indexPath.row])")
             print ("setting true for \(exerciseNameArray[indexPath.row])")
             cell.imageSelected = true
             cell.updateImage()
         } else {
+            print("\(selectedExercises) does not contain \(exerciseNameArray[indexPath.row])")
             print ("setting false for \(exerciseNameArray[indexPath.row])")
             cell.imageSelected = false
             cell.updateImage()

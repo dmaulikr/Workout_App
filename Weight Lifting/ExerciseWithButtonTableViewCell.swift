@@ -37,10 +37,10 @@ class ExerciseWithButtonTableViewCell: UITableViewCell {
     func changeTickImage() {
         if (imageSelected == false) {
             imageSelected = true
-            tickImage.image = UIImage(named: "tickedCircle.png")
+            updateImage()
         } else {
             imageSelected = false
-            tickImage.image = UIImage(named: "untickedCircle.png")
+            updateImage()
         }
     }
     

@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Charts
 
+
 class ResultForExerciseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var chartView: LineChartView!
@@ -162,11 +163,6 @@ class ResultForExerciseViewController: UIViewController, UITableViewDelegate, UI
         
         
         self.chartView.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
-        
-        
-        
-        
-        
         
         
         

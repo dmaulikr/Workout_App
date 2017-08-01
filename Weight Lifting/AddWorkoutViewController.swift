@@ -203,11 +203,13 @@ class AddWorkoutViewController: UIViewController,UITableViewDelegate,UITableView
             
             while (i < tableView.numberOfRows(inSection: 0)) {
                 indexPath = IndexPath(row: i, section: 0)
-                print("here")
                 
                 let context = DatabaseController.getContext()
                 
                 let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
+                
+                print("i = \(i)/\(tableView.numberOfRows(inSection: 0)):")
+                print("Finding: \((tableView.cellForRow(at: indexPath) as! ExerciseForWorkoutTableViewCell).exerciseNameLabel.text!)")
                 fetchRequest.predicate = NSPredicate(format: "name = %@", (tableView.cellForRow(at: indexPath) as! ExerciseForWorkoutTableViewCell).exerciseNameLabel.text!)
                 fetchRequest.returnsObjectsAsFaults = false
                 
